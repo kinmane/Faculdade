@@ -1,0 +1,27 @@
+import { Project, DailyTasks } from "./TaskManager";
+
+console.log("=== Exercício 1 - Sistema de Tarefas e Projetos ===\n");
+const projeto1 = new Project("Sistema de E-commerce");
+projeto1.addTask("Criar banco de dados");
+projeto1.addTask("Desenvolver API REST");
+projeto1.addTask("Implementar autenticação");
+projeto1.addTask("Criar interface do usuário");
+projeto1.addTask("Criar banco de dados");
+projeto1.displayTasks();
+console.log("\n--- Lista de tarefas retornada ---");
+console.log(projeto1.listTasks());
+const projeto2 = new Project("App Mobile");
+projeto2.addTask("Configurar React Native");
+projeto2.addTask("Criar telas principais");
+projeto2.addTask("Integrar com backend");
+projeto2.displayTasks();
+console.log("\n" + "=".repeat(50));
+const tarefasDiarias = new DailyTasks();
+tarefasDiarias.addTask("Verificar e-mails");
+tarefasDiarias.addTask("Reunião com equipe");
+tarefasDiarias.addTask("Revisar código");
+tarefasDiarias.addTask("Atualizar documentação");
+tarefasDiarias.addTask("Verificar e-mails");
+tarefasDiarias.displayTasks();
+console.log("\n--- Lista de tarefas diárias retornada ---");
+console.log(tarefasDiarias.listTasks());
